@@ -1,55 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="杨明涛 杨明涛个人网站 开源总结 杨明涛开发总结">
-    <meta name="description" content="杨明涛日常开发总结">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="杨明涛 杨明涛个人网站 开源总结 杨明涛开发总结"
+    />
+    <meta name="description" content="杨明涛日常开发总结" />
     <title>杨明涛</title>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        body{
-            width: 100vw;
-            min-height: 100vh;
-            display: flex;
-        }
-        .container{
-            border: 1px solid #22a6b3;
-            height: fit-content;
-            width: 80vmin;
-            margin: 20px auto;
-            border-radius: 5px;
-        }
-        .title{
-            color: white;
-            font-weight: bolder;
-            background: linear-gradient(to bottom,#22a6b3 50%,#7ed6df 100%);
-            padding: 10px;
-        }
-        .content{
-            padding: 10px;
-            letter-spacing: 2px;
-            font-weight: lighter;
-        }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        position: relative;
+        background-color: #30336b;
+      }
+      .container {
+        border: 1px solid #22a6b3;
+        height: fit-content;
+        width: 80vmin;
+        margin: 20px auto;
+        border-radius: 5px;
+      }
+      .title {
+        color: white;
+        font-weight: bolder;
+        background: linear-gradient(to bottom, #22a6b3 50%, #7ed6df 100%);
+        padding: 10px;
+      }
+      .content {
+        padding: 10px;
+        color: white;
+        letter-spacing: 2px;
+        font-weight: lighter;
+      }
+      #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="title">
-            杨明涛个人资料简介
-        </div>
-        <div class="content">
-            杨明涛，全日制本科院校，软件工程专业毕业。之前是外派驻场工作，于2014年11月4日转战北京
-            盛威时代科技集团股份有限公司。在职期间，做过安卓和ios开发，起名下开发的app有bus365(后更名
-            出行365)、宜昌交运等。于2020年在公司的调度下，进军后台服务的开发。在后台服务和后台界面方面
-            有着丰富的开发经验。特别是对java、javascript、html、css、vue、layui、rust、tauri等语言非常
-            熟悉。能将市面上任何一个框架集成到layui中。抗压能力和学习能力特别强，愿意为公司的发展一路保驾护航。
-            选我没错，一定不会让您失望。
-        </div>
+      <div class="title">杨明涛个人资料简介</div>
+      <div class="content">
+        杨明涛，全日制本科院校，软件工程专业毕业。之前是外派驻场工作，于2014年11月4日转战北京
+        盛威时代科技集团股份有限公司。在职期间，做过安卓和ios开发，起名下开发的app有bus365(后更名
+        出行365)、宜昌交运等。于2020年在公司的调度下，进军后台服务的开发。在后台服务和后台界面方面
+        有着丰富的开发经验。特别是对java、javascript、html、css、vue、layui、rust、tauri等语言非常
+        熟悉。能将市面上任何一个框架集成到layui中。抗压能力和学习能力特别强，愿意为公司的发展一路保驾护航。
+        选我没错，一定不会让您失望。
+      </div>
     </div>
-</body>
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script>
+      window.onload = function () {
+        particlesJS("particles-js", {
+          particles: {
+            number: {
+              value: 80,
+              density: {
+                enable: true,
+                value_area: 800,
+              },
+            },
+            color: {
+              value: "#ffffff",
+            },
+            shape: {
+              type: "polygon",
+              stroke: {
+                width: 0,
+                color: "#ff0000",
+              },
+              polygon: {
+                nb_sides: 5,
+              },
+              image: {
+                src: "img/github.svg",
+                width: 100,
+                height: 100,
+              },
+            },
+            opacity: {
+              value: 0.5,
+              random: false,
+              anim: {
+                enable: false,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false,
+              },
+            },
+            size: {
+              value: 3,
+              random: true,
+              anim: {
+                enable: false,
+                speed: 40,
+                size_min: 0.1,
+                sync: false,
+              },
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#ffffff",
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200,
+              },
+            },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse",
+              },
+              onclick: {
+                enable: true,
+                mode: "push",
+              },
+              resize: true,
+            },
+            modes: {
+              grab: {
+                distance: 400,
+                line_linked: {
+                  opacity: 1,
+                },
+              },
+              bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+              push: {
+                particles_nb: 4,
+              },
+              remove: {
+                particles_nb: 2,
+              },
+            },
+          },
+          retina_detect: false,
+        });
+      };
+    </script>
+  </body>
 </html>
